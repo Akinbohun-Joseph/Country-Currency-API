@@ -9,7 +9,7 @@ dotenv.config();
 
 const app: Application = express();
 
-const PORT = process.env.PORT || 3000;
+const port: number = parseInt(process.env.PORT || '3000', 10);
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 app.use(cors());
@@ -60,14 +60,14 @@ async function startServer(): Promise<void> {
     await initializeDatabase();
     console.log('✅ Database initialized');
     
-    app.listen(PORT, () => {
+    app.listen(port, "0.0.0.0", function () {
       console.log(`
 ╔═══════════════════════════════════════════════════════╗
 ║     Country Currency API Server Started 🚀            ║
 ╠═══════════════════════════════════════════════════════╣
 ║  Environment: ${NODE_ENV.padEnd(40)}║
-║  Port:        ${PORT.toString().padEnd(40)}║
-║  URL:         http://localhost:${PORT.toString().padEnd(28)}║
+║  Port:        ${port.toString().padEnd(40)}║
+║  URL:         http://localhost:${port.toString().padEnd(28)}║
 ╠═══════════════════════════════════════════════════════╣
 ║  Endpoints:                                           ║
 ║    POST   /countries/refresh                          ║
