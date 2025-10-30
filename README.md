@@ -514,9 +514,9 @@ Ensure no TypeScript errors
 
 📝 License
 This project is licensed under the MIT License.
-👥 Authors
+👥 Author
 
-Your Name - Your GitHub
+Akinbohun Joseph
 
 🙏 Acknowledgments
 
