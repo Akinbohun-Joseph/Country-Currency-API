@@ -1,5 +1,6 @@
 Country Currency & Exchange Rate API
 A RESTful API that fetches country data from external APIs, enriches it with exchange rates, and provides CRUD operations with generated summary visualizations.
+
 📋 Features
 
 External API Integration: Fetches data from RestCountries and ExchangeRate APIs
